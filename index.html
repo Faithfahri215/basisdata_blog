@@ -1,0 +1,169 @@
+<html>
+
+<head>
+
+    <title>Website Pengenalan DBMS</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Website Sederhana</h1>
+        <nav>
+            <a href="https://ubpkarawang.ac.id/">
+                <img class="ubp" src="https://ubpkarawang.ac.id/wp-content/uploads/2021/11/Logo-UBP-Karawang-1.png"
+                    alt="">
+            </a>
+        </nav>
+        <div class="menu">
+            <a href="Beranda">Beranda</a>
+            <a href="Tentang">Tentang</a>
+            <a href="Kontak">Kontak</a>
+            <a href="Profile">Profile</a>
+        </div>
+    </header>
+    <main>
+        <p class="self">Faith Ikhtiari IF22B 22416255201201</p>
+        <p class="dosen">Dosen Pengampu : <a href="adrip.id">Adi Rizky Pratama, M.Kom</a></p>
+        <br>
+
+        <h1>ERD (Entity-Relationship Diagram) dalam HTML</h1><br>
+
+        <section id="attribute">
+            <h2>1. Attribute</h2>
+            <p>
+                Attribute adalah data yang mendefinisikan karakteristik atau sifat dari entitas dalam basis data.
+                Contoh atribut bisa berupa nama, nomor telepon, alamat, tanggal lahir, dll.
+                Atribut dapat dibagi menjadi beberapa jenis, seperti atribut sederhana (misalnya, nomor telepon),
+                atribut tergantung (misalnya, usia yang dapat dihitung dari tanggal lahir), atau atribut majemuk
+                (misalnya, alamat yang terdiri dari beberapa komponen seperti jalan, kota, negara, dan kode pos).
+            </p><br>
+        </section>
+
+        <section id="entity">
+            <h2>2. Entity</h2>
+            <p>
+                Entitas (Entity) adalah objek dalam dunia nyata atau dalam konteks basis data yang memiliki atribut yang
+                menggambarkan karakteristiknya.
+                Dalam ERD, entitas biasanya digambarkan sebagai kotak dengan nama entitas di dalamnya.
+                Contoh entitas dalam sebuah sistem informasi mungkin adalah "pelanggan," "produk," "karyawan," dan
+                sebagainya.
+            </p><br>
+        </section>
+
+        <h2>3. Relationship</h2>
+        <p>
+            Relationship menggambarkan hubungan antara entitas-entitas dalam basis data.
+            Relasi dapat memiliki tingkatan yang berbeda, seperti satu-ke-satu (one-to-one), satu-ke-banyak
+            (one-to-many), atau banyak-ke-banyak (many-to-many).
+            Dalam ERD, relasi biasanya digambarkan sebagai garis yang menghubungkan dua entitas dan sering memiliki
+            label yang menjelaskan sifat hubungan tersebut, misalnya, "memiliki," "menjual," "bekerja untuk," dll.
+            Contoh relasi dapat mencakup hubungan antara entitas "pelanggan" dan "pesanan," di mana satu pelanggan dapat
+            memiliki banyak pesanan (satu-ke-banyak), atau hubungan antara entitas "mahasiswa" dan "mata kuliah," di
+            mana banyak mahasiswa dapat mengambil banyak mata kuliah (banyak-ke-banyak).
+        </p>
+        </section><br><br><br>
+
+        <section id="ERD Diagram"></section>
+        <h2>4. ERD Diagram</h2>
+        <figure class="gambarubp">
+            <img src="https://www.dicoding.com/blog/wp-content/uploads/2021/08/ERD-1536x1176.png" alt="gambar erd">
+        </figure><br><br><br>
+
+        <section>
+            <p>
+                Jadi pada contoh ER diagram di atas menjelaskan terdapat entitas, atribut, dan proses apa saja yang terjadi
+                pada saat mahasiswa ingin meminjam buku dari perpustakaan. ER diagram tersebut dapat dijadikan gambaran
+                untuk membuat sebuah sistem database perpustakaan.
+                Dapat dilihat pada diagram perpustakaan di atas terdapat empat entitas di dalamnya. Keempat entitas tersebut
+                adalah mahasiswa, anggota perpustakaan, buku, dan denda. Setiap entitas memiliki atributnya masing-masing.
+            </p>
+            <img src="./tabel1.png" style="width: 500px; height: 200px; ">
+            <p>
+                Pada setiap relasi dari ER diagram di atas juga mengandung beberapa atribut yang digunakan dalam
+                prosesnya. Seperti contohnya saat mahasiswa ingin mendaftar menjadi anggota perpustakaan maka proses
+                yang terjadi adalah mahasiswa dimintai datanya seperti NIM, nama, jurusan, dan alamat untuk didaftarkan
+                menjadi anggota perpustakaan.
+            </p>
+        </section><br><br><br>
+
+
+        <section>
+        <h2>Primary Key, Foreign Key, dan Candidate Key</h2>
+        <p>
+                Dalam konteks database dan Entity-Relationship Diagram (ERD), Primary Key, Foreign Key, dan Candidate Key adalah konsep yang penting. Berikut adalah penjelasan singkat dan contoh penerapannya:
+               
+                <ol>
+                    <li>
+                        <h3>Primary Key</h3>
+                        sebuah kolom atau set kolom yang secara unik mengidentifikasi setiap baris dalam sebuah tabel. Primary Key harus unik dan tidak boleh berisi nilai NULL.
+                        Contoh Penerapan pada ERD:
+                        <ul>
+                        <li>Tabel Mahasiswa dengan Primary Key "NIM" (Nomor Induk Mahasiswa).</li>
+                        <li>Tabel Karyawan dengan Primary Key "ID_Karyawan".</li>
+                        <li>Tabel Produk dengan Primary Key "ID_Produk".</li>
+            <img src="./images (82).jpeg" style="width: 600px; height: 380px; ">
+                        </ul>
+
+                    <li>
+                        <h3>Foreign Key</h3>
+                        Foreign Key adalah kolom atau set kolom yang mengacu pada Primary Key di tabel lain. Foreign Key menciptakan hubungan antara dua tabel.
+                        Contoh Penerapan pada ERD:
+                        <ul>
+                        <li>Tabel Transaksi dengan Foreign Key "NIM" yang mengacu pada Primary Key "NIM" di Tabel Mahasiswa.</li>
+                        <li>Tabel Pesanan dengan Foreign Key "ID_Produk" yang mengacu pada Primary Key "ID_Produk" di Tabel Produk.</li>
+                        <li>Tabel Detail_Pembelian dengan Foreign Key "ID_Pembelian" yang mengacu pada Primary Key "ID_Pembelian" di Tabel Pembelian.</li><br>
+            <img src="./f key.jpg" style="width: 600px; height: 380px; ">            
+                        </ul>
+
+                    <li>
+                        <h3>Candidate Key:</h3>
+                        Definisi: Candidate Key adalah kolom atau set kolom yang dapat berfungsi sebagai Primary Key. Dengan kata lain, Candidate Key adalah kandidat untuk menjadi Primary Key.
+                        Contoh Penerapan pada ERD:
+                        <ul>
+                        <li>Tabel Dosen dengan Candidate Key "NIP" (Nomor Induk Pegawai).</li>
+                        <li>Tabel Pelanggan dengan Candidate Key "ID_Pelanggan" atau "Email".</li>
+                        <li>Tabel Kategori dengan Candidate Key "Kode_Kategori" atau "Nama_Kategori".</li>
+            <img src="./cadidate key.jpg" style="width: 600px; height: 380px; ">
+                        </ul>
+                    </li>
+                </ol>
+            </p>
+            <section><br><br><br>
+
+
+        <section>
+        <h2>Many-to-Many Relation:</h2>
+        <p>
+            Many-to-Many Relation terjadi ketika satu entitas dalam satu tabel dapat berhubungan dengan banyak entitas dalam tabel lain, dan sebaliknya. Contohnya, seorang mahasiswa bisa terdaftar dalam banyak mata kuliah, dan setiap mata kuliah bisa diikuti oleh banyak mahasiswa.
+        <ol>
+            <li>
+                <h2>Kenapa Many-to-Many tidak disarankan dalam ERD:</h2>
+                    <ul>
+                        <li>Kesulitan dalam Implementasi: Many-to-Many relationships sulit diimplementasikan secara langsung dalam model relasional. Kebanyakan sistem basis data relasional tidak mendukung hubungan banyak-ke-banyak tanpa tabel perantara.</li>
+                        <li>Kompleksitas Query: Query yang melibatkan many-to-many relations bisa menjadi kompleks, sulit dipahami, dan membutuhkan waktu eksekusi yang lebih lama.</li>
+                        <li>Ketidakkonsistenan Data: Dalam model many-to-many, dapat sulit untuk memastikan konsistensi data karena banyaknya hubungan yang harus dipelihara.</li>
+                    </ul>
+<li>
+    <h2>Solusi Alternatif untuk Many-to-Many Relations:</h2>
+                    
+                        <ul>
+                        <li>Perantara (Join Table): Salah satu cara untuk menangani many-to-many relations adalah dengan menggunakan tabel perantara yang menghubungkan dua entitas. Tabel perantara ini mengandung dua atau lebih Foreign Keys yang merujuk ke Primary Keys dari entitas yang terlibat.</li>
+                        <li>Relations: Dalam beberapa kasus, many-to-many dapat dipecah menjadi dua one-to-many relations dengan menggunakan tabel perantara.</li>
+                    Sebagai contoh, misalkan kita memiliki entitas Mahasiswa dan Mata Kuliah, dan ada many-to-many relation antara keduanya. Solusi yang umum adalah membuat tabel perantara "Daftar_Matkul" dengan Foreign Keys "ID_Mahasiswa" dan "ID_Matkul".<br>
+            <img src="./slide_18.jpg" style="width: 600px; height: 380px; ">
+                        </ul>
+                    </li>
+                </ol>
+            </p>
+            <section><br><br><br>
+                
+            </main>
+    <div class="footer">
+        <footer>
+            <p>Copyright &copy; 2023 by Faith Ikhtiari </p>
+        </footer>
+    </div>
+</body>
+
+</html>

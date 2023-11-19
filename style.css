@@ -1,0 +1,86 @@
+body {
+    background-image: url('gambar.jpg'), linear-gradient(45deg, #ffffff, #fcfcfc, rgb(255, 255, 255), #ffffff);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  header {
+    background-color: #04a55a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+img {
+    width: 800;
+    height: 600;
+}
+
+.self,
+.dosen {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.ubp {
+    width: 85;
+    height: 85;
+    margin-left: 65rem;
+    margin-top: -5rem;
+}
+
+.dosen {
+    margin-left: 30rem;
+    margin-top: -2rem;
+}
+
+.menu a {
+    color: white;
+    font-size: 14px;
+    margin-left: 1rem;
+    text-decoration: none;
+}
+
+.footer {
+    margin-top: 20px;
+    text-align: center;
+    background-color: rgb(1, 170, 71);
+    color: white;
+    padding: 20px;
+}
+
+h1,
+h2 {
+    color: black;
+}
+
+p {
+    color: black;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
